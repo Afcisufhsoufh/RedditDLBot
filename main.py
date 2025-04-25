@@ -2,6 +2,8 @@ import time
 import logging
 import requests
 import os
+from threading import Thread
+from flask import Flask
 import tempfile
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
@@ -10,6 +12,21 @@ from moviepy import VideoFileClip
 from app import app
 from utils import LOGGER
 from config import COMMAND_PREFIX
+
+# Setup minimal Flask server to prevent Heroku R10 error
+flask_app = Flask(__name__)
+
+@flask_app.route('/')
+def index():
+    return "Smart Tool Bot is running!"
+
+def run_flask():
+    port = int(os.environ.get("PORT", 5000))
+    flask_app.run(host="0.0.0.0", port=port)
+
+# Start Flask in background
+Thread(target=run_flask).start()
+
 
 # Cache settings
 media_cache = {}
