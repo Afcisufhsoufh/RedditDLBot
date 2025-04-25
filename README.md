@@ -18,6 +18,7 @@ A Superb DL Speed Boosted Reddit Downloader Bot powered by the [@BDBOTS API](htt
 
 - Python 3.9 or above
 - Telegram Bot API Token ([Get one from BotFather](https://t.me/BotFather))
+- Telegram API ID API HASH From my.telegram.org
 
 ---
 
@@ -92,6 +93,14 @@ RedditDLBot/
 ## Contributing
 
 Contributions are welcome! Feel free to fork the repository, make enhancements, and submit a pull request.
+
+---
+
+## Credit
+
+- **API Powered By**: [BDBOTS](https://bdbots.xyz)  
+  - Telegram: [T.me/BDBOTS](https://t.me/BDBOTS)  
+  - GitHub: [GitHub.com/BDBOTS](https://github.com/BDBOTS)  
 
 ---
 
