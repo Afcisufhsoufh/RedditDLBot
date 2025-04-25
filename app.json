@@ -1,0 +1,35 @@
+{
+  "name": "RedditDLBot",
+  "description": "A Telegram bot to download Reddit media. Deployable to Heroku with Docker support.",
+  "repository": "https://github.com/abirxdhack/RedditDLBot",
+  "keywords": ["telegram", "bot", "reddit", "downloader", "docker", "heroku"],
+  "env": {
+    "API_ID": {
+      "description": "Your Telegram API ID from https://my.telegram.org",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Your Telegram API Hash from https://my.telegram.org",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "The token for your Telegram bot obtained from @BotFather",
+      "required": true
+    },
+    "COMMAND_PREFIX": {
+      "description": "List of command prefixes to trigger the bot (e.g., ',', '.', '/', '!')",
+      "required": false,
+      "value": "[\",\", \".\", \"/\", \"!\"]"
+    }
+  },
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "addons": [],
+  "scripts": {
+    "postdeploy": "echo 'RedditDLBot successfully deployed to Heroku!'"
+  }
+}
